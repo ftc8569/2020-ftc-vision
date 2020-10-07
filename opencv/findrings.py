@@ -27,7 +27,7 @@ cv2.imshow('Canny Mask', cannyMask)
 
 # find the bounding rectangles
 contours, hiearchy = cv2.findContours(cannyMask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
-ringContourArea = 0;
+ringContourArea = 0
 ringFound = False
 for c in contours:
      poly = cv2.approxPolyDP(c,3,True)
