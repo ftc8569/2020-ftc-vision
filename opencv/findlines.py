@@ -38,8 +38,12 @@ for line in lines:
 
     a = np.cos(theta)
     b = np.sin(theta)
+
+    # x0, y0 are just the point where the line is perpendicular to the radius (rho)
     x0 = a*rho
     y0 = b*rho
+
+    # the 1000 here is arbitrary just to project the endpoints of the line segments outside of the frame
     x1 = int(x0 + 1000*(-b))
     y1 = int(y0 + 1000*(a))
     x2 = int(x0 - 1000*(-b))
