@@ -15,14 +15,15 @@ cv2.createTrackbar("Val Min","TrackBars", 0, 255, empty)
 cv2.createTrackbar("Val Max","TrackBars", 255, 255, empty)
 
 
-img = cv2.imread('four-rings.jpg')
+img = cv2.imread('shooting-blue-1.png')
+# img = cv2.imread('four-rings.jpg')
 # img = cv2.imread('no-rings.jpg')
 # img = cv2.imread('one-ring.jpg')
 
-imgResize = cv2.resize(img,(img.shape[1]//4, img.shape[0]//4), interpolation=cv2.INTER_LINEAR)
-cv2.imshow('Image', imgResize)
+# imgResize = cv2.resize(img,(img.shape[1]//4, img.shape[0]//4), interpolation=cv2.INTER_LINEAR)
+# cv2.imshow('Image', imgResize)
 
-imgHSV = cv2.cvtColor(imgResize, cv2.COLOR_BGR2HSV)
+imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 cv2.imshow('HSV Image', imgHSV)
 
 
